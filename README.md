@@ -2,6 +2,19 @@
 
 **NOTE:** Here be 🐉 dragons, this is early testing software.
 
+## Quickstart
+
+1. Install Docker and Docker Compose.
+2. On the host, set the following values in `/etc/sysctl.conf`.
+
+```
+fs.file-max=900000
+fs.nr_open=9000001
+```
+3. `docker-compose up`
+4. Wait a few minutes, and then query the system: `curl localhost:1984/info`
+
+
 ## Workflow Status
 
 | Status | Description |
@@ -16,3 +29,20 @@
 ## Description
 
 Container image for mining ⛏️ on the Arweave Network.
+
+# via: https://docs.docker.com/engine/install/ubuntu/
+Install Docker on server
+
+```
+apt update
+apt upgrade
+apt autoremove
+
+apt-get remove docker docker-engine docker.io containerd runc
+
+apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+```

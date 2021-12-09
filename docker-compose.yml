@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  arweave:
+    image: "ghcr.io/cluutch/arweave-miner:latest"
+    environment:
+      - ARWEAVE_REWARD_ADDRESS=ZH8pS4jH-ZHryj5UnoY7yhBMs3F6fd7QCZYzx7JjcqA
+    network_mode: "host"
+
